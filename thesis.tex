@@ -1,0 +1,362 @@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%
+%	MODELO LaTeX PARA ELABORACAO DE TESES E DISSERTACOES 
+%  ----------------------------------------------------
+%
+%	BASEADO NA CLASSE PPGMAp.cls (Classe base: report.cls)
+%  ------------------------------------------------------
+%
+%
+%	Creditos
+%
+%		Autor: Guilherme F. Fornel (guilherme.fornel@ufrgs.br)
+%	
+%		! Se encontrar bugs envie um e-mail relatando !
+%
+%
+%	Pacotes nativos da classe PPGMAp.cls (nao precisam ser adicionados pelo usuario)
+%		
+%		inputenc (utf8 encoding)
+%		fontenc  (T1 encoding)
+%		babel    (default: brazil - english, portuguese, french, spanish,
+%				    german, russian)
+%		etoolbox
+%		nomencl  (intoc option)
+%		lipsum
+%		atbegshi
+%		calc
+%
+%
+%	Sobre a compilacao
+%
+%		E recomendavel a utilizacao da biblioteca/compilador TeX Live 2016 FULL
+%		(este modelo foi compilado para teste com a versao 2016.20170123-5)
+%
+%		Para a instalacao do TeX Live em so's derivados do linux Ubuntu utilizar
+%
+%			sudo apt-get install texlive-full 
+%
+%		# Compilando o modelo via terminal do linux:
+%
+%			Para a compilacao via terminal utilizar as seguintes linhas de 
+%			comando:
+%
+%			pdflatex nome_do_arquivo_principal
+%			bibtex nome_do_arquivo_principal   <opcional>
+%			makeindex -s nomencl.ist -t nome_do_arquivo_principal.nlg -o nome_do_arquivo_principal.nls nome_do_arquivo_principal.nlo <para lista de simbolos>
+%			pdflatex nome_do_arquivo_principal
+%			pdflatex nome_do_arquivo_principal
+%
+%			No caso deste modelo:
+%
+%			pdflatex main
+%			bibtex main   <opcional>
+%			makeindex -s nomencl.ist -t main.nlg -o main.nls main.nlo <para lista de simbolos>
+%			pdflatex main
+%			pdflatex main		
+%
+%		# Utilizando a ide TeXstudio:
+%
+%			Usuarios do TeXstudio devem configurar a ide para gerar a lista de 
+%			simbolos acessando
+%		
+% 			Opções -> Configurar TeXstudio -> Compilação -> Comandos do usuário
+%					-> Adicionar
+%
+%			Deve ser adicionado o comando Make Nomenclature com
+%
+%			Nome do comando:  user0:Make Nomenclature
+%			Linha de comando: makeindex -s nomencl.ist -t %.nlg -o %.nls %.nlo
+%
+%			Para a compilacao utilizar:
+%
+%			Ferramentas -> Comandos -> PDFLaTeX
+%			Ferramentas -> Comandos -> BibteX              <opcional>
+%			Ferramentas -> Usuario  -> Make Nomenclature   <para lista de simbolos>
+%			Ferramentas -> Comandos -> PDFLaTeX
+%			Ferramentas -> Comandos -> PDFLaTeX
+%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%
+%	Opcoes da classe PPGMAp.cls
+%
+%		Por padrao a classe esta configurada para tese de doutorado com texto em 
+%		portugues, folha A4, tamanho de fonte 12pt e configuracao de impressao em
+%		ambos os lados da folha. Ao usuario, porem, estao disponiveis algumas opcoes 
+%		de configuracao:
+%
+%		qualification : opcao para texto de qualificacao
+%
+%		masters : dissertacao de mestrado
+%
+%		english : texto em ingles
+%
+%		oneside : opcao para configuracao de impressao em apenas um lado da folha
+%					 (ficha catalografica tambem)
+%
+%		print : opcao de versao final do texto para impressao em apenas um lado 
+%				  da folha, com excessao da primeira pagina (folha de rosto e ficha
+%				  catalografica). Para tal sao inseridas paginas em branco no 
+%				  documento, e o usuario deve selecionar no aplicativo de
+%				  impressao do sistema operacional a opcao IMPRIMIR EM AMBOS OS LADOS
+%		
+%		Demais opcoes da classe base report.cls NAO sao repassadas a classe PPGMAp.cls
+%	
+
+% \documentclass[print,masters]{./config/PPGMAp}
+\documentclass[masters]{./config/PPGMAp}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%
+%	Informacoes para os elementos pre-textuais
+%
+%		Observacoes
+%
+%			Algumas informacoes sao opcionais, como \coadvisor e \memberd
+%
+%			Por padrao a data do documento e a data de compilacao e a data da defesa
+%			e especificada com o comando \date
+%
+%			Nas infomacoes onde e possivel especificar o genero do individuo,
+%		   a seguinte convencao e adotada: 'a','A','f' ou 'F' para feminino,  
+%		   caso contrario masculino (neste caso os colchetes [] NAO precisam
+%			ser escritos).
+%
+%		   (A especificacao da opcao 'o' neste modelo se da somente para exibir que
+%			nao ha nenhum efeito sobre o genero, o genero masculino sendo adotado. 
+%			Obviamente, no caso de texto em ingles a especificacao de genero tambem 
+%			nao tem nenhum efeito)
+%
+
+%
+% Titulo e data da defesa:
+%
+\title{Larousse Gastronomique}
+\date{novembro}{2002}
+
+%
+% Linha de pesquisa:
+%
+\area{Análise Aplicada}
+
+%
+% Palavras-chave:
+%	{palavra-chave 1}{palavra-chave 2}{palavra-chave 3}{palavra-chave 4}
+%
+% " Keywords:
+%	  {keyword 1}{keyword 2}{keyword 3}{keyword 4} "
+%
+\keywords{Dissertação}{Tese}{Mestrado}{Doutorado}
+
+%
+% Autor:
+% 	[genero<opcional>]{nome}{sobrenome}
+%
+\author[o]{Hannibal}{Lecter}
+
+%
+% Orientador (e, se ha, co-orientador):
+% 	[genero<opcional>]{tratamento}{nome}{sobrenome}
+%
+\advisor{Prof. Dr.}{Nome}{Sobrenome}
+%\coadvisor[a]{Profa. Dra.}{Nome}{Sobrenome}
+
+%
+% Membros da banca:
+% 	{tratamento}{nome}{sobrenome}
+%
+\membera{Profa. Dra.}{Nome}{Sobrenome}{Instituição A}
+\memberb{Prof. Dr.}{Nome}{Sobrenome}{Instituição B}
+\memberc{Prof. Dr.}{Nome}{Sobrenome}{Instituição C}
+
+%
+% Se ha um quarto membro na banca:
+%
+%\memberd{Prof. Dr.}{Nome}{Sobrenome}{Instituição D}
+
+%
+% Coordenador(a) do PPGMAp:
+% 	[genero<opcional>]{tratamento}{primeiro nome}{ultimo nome}
+%
+\PPGMApcoord{Prof. Dr.}{Ezequia}{Sauter}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%
+%	Pacotes utilizados, opcoes e comandos definidos pelo usuario
+%
+%
+% \usepackage{mypreamble}
+% \usepackage{mypackages}
+% \usepackage{mycommands}
+% ...
+%
+
+\usepackage{./config/pack-and-cmd} % preâmbulo em outro arquivo!
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%
+%	Definicoes de nomenclaturas (siglas, simbolos e constantes fisicas)
+%
+%		A classe PPGMAp.cls utiliza o pacote nomenclature.sty para a criacao da
+%		lista de siglas e simbolos. Isto possibilita ao usuario inserir 
+%		facilmente Siglas, Simbolos e Constantes Fisicas respectivamente com os
+%		comandos \Abbrev, \Symbol e \PConst definidos na classe PPGMAp.cls
+%
+%		Apesar de neste modelo os simbolos estarem especificados no preambulo
+%		estes comandos (a principio) podem ser especificados tambem em quaisquer 
+%     lugares dentro do ambiente de documento.	
+%
+%		Dupla insercao de simbolos (a principio) e desconsiderada.
+%
+%		O arquivo .nls necessario para a lista e gerado com o comando
+%
+%		makeindex main.nlo -s nomencl.ist -o main.nls
+%
+
+\Abbrev{SBM}{Sociedade Brasileira de Matemática}%
+\Abbrev{SBM}{Sociedade Brasileira de Matemática}% dupla insercao, desconsiderada
+\Abbrev{CFD}{Computational Fluid Dynamics}%
+
+\Symbol{$\Delta$}{Operador laplaciano}%
+\Symbol{$\mu_N$}{Medida empírica}%
+
+\PConst{$k$}{Constante de Boltzmann}%
+	{$1,380 648 52\times 10^{-23}\; J\cdot K^{-1}$}%
+\PConst{$\hbar$}{Constante reduzida de Planck}%
+	{$6,626 070 15\times 10^{-34}\; J\cdot s/2\pi$}%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+%
+%	Ambiente de documento
+%
+%		Sao declarados, alem de comandos para impressao de elementos obrigatorios
+%		no texto, alguns ambientes de insercao (obrigatorios ou nao) nativos
+%		da classe report.cls ou definidos na classe PPGMAp.cls.
+%
+%		Sao indicados dois sistemas de insercao de referencias bibliograficas,
+%		o nativo e o com Bibtex.
+%
+%		A forma adotada para a declaracao dos elementos no ambiente documento visa 
+%		dar alguma liberdade de modificacao do texto ao usuario.
+%
+
+\begin{document}
+
+\include{config/tikz-defn}
+%
+%	Elementos pre-textuais:
+%
+\frontmatter % formatacao do estilo dos elementos pre-textuais
+
+%	Impressao da folha de rosto:
+	\coversheet
+
+%	Impressao da ficha catalografica:
+	\catalogsheet
+
+%	Impressao da folha de aprovacao:
+	\approvalsheet
+
+%	Epigrafe:
+%		Entre colchetes e especificada a porcentagem da largura da pagina destinada
+%		a epigrafe (padrao 0.5)
+	\begin{epigraph}[0.7]
+		{
+			\normalfont\large
+			A$\Gamma$E$\Omega$METPHTO$\Sigma$
+			MH$\Delta$EI$\Sigma$
+			EI$\Sigma$IT$\Omega$
+		} \\[-12pt]
+		``Que não entre aqui aquele que não sabe Geometria'' \\
+		(Inscrição que marcava a entrada da Academia de Platão)
+		% Epigrafe "roubada" da tese de Renato Vaz Linn:
+		% https://lume.ufrgs.br/handle/10183/163257
+	\end{epigraph}
+
+%	Agradecimentos <ambiente>:
+	\begin{acknowledgments}
+		\lipsum[1]
+	\end{acknowledgments}
+
+%	Impressao do sumario:
+	\tableofcontents
+
+%	Impressao da lista de figuras:
+	\listoffigures
+
+%	Impressao da lista de tabelas:
+	\listoftables
+
+%	Impressao da lista de siglas e simbolos:
+%		Entre colchetes e especificado um parametro de comprimento do campo de
+%		simbolo (padrao 2).
+%	\printnomenclature[6]
+	\printnomenclature
+
+%	Resumo <ambiente>:
+	\begin{resumo}
+		\lipsum[2-4]
+	\end{resumo}
+
+%	Abstract <ambiente>:
+	\begin{abstract}
+		\lipsum[5-7]
+	\end{abstract}
+
+%
+%	Elementos textuais:
+%
+\mainmatter % formatacao do estilo dos elementos textuais
+
+%
+% Chapters
+%
+
+% Chapter: Introduction
+\include{./chap/intro}
+
+
+%
+%	Referencias bibliograficas:
+%
+\bibliographystyle{acm}  % formatacao do estilo das referencias
+
+%	Bibliografia com o sistema nativo:
+%
+	% \begin{thebibliography}{9}
+	% 	\addbibtocontents
+	% 	\bibitem{lamport94}
+	% 	  Leslie Lamport,
+	% 	  \textit{\LaTeX: a document preparation system},
+	% 	  Addison Wesley, Massachusetts,
+	% 	  2nd edition,
+	% 	  1994.
+	% \end{thebibliography}
+
+%	Bibliografia com Bibtex:
+%
+	\bibliography{./bib/ref}
+	% \nocite{lamport94,warnatz06}
+	\nocite{warnatz06}
+
+%
+%	Apendices:
+%
+\appendix % formatacao do estilo dos apendices
+
+%	Apendice A - Algoritmos:
+	\chapter{Algoritmos}
+		\lipsum[29]
+		\section{Primeira seção}
+			\lipsum[30-31]
+		\section{Segunda seção}
+			\lipsum[32-33]
+		\section{Terceira seção}
+			\lipsum[34-35]
+
+\end{document}

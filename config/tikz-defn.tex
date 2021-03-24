@@ -1,0 +1,27 @@
+% !TeX root = ../thesis.tex
+
+% defining tikz decoration -dot-:
+\tikzset{
+    -dot-/.style={
+        decoration={
+            markings,
+            mark=at position #1 with {
+                \fill circle (1.5pt);
+            }
+        },
+        postaction={decorate}
+    }
+}
+
+% defining tikz decoration ->:
+\tikzset{
+    ->-/.style={
+        decoration={
+            markings,
+            mark=at position #1 with {
+                \arrow{>}
+            }
+        },
+        postaction={decorate}
+    }
+}

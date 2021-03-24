@@ -1,0 +1,30 @@
+% ./config/pack-and-cmd.sty
+%
+% Packages and Commands
+%
+
+% packages and its configurations
+\usepackage{amsmath} \allowdisplaybreaks
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{tikz} \usetikzlibrary{decorations.markings}
+\usepackage{pgf}
+
+% commands
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}[1][]{\mathbb{R}^{#1}}
+\newcommand{\fracLap}[1][]{\left(-\triangle\right)^s#1\!}
+
+\newcommand{\E}{\text{E}}
+
+% paired delimiters
+\DeclareMathOperator{\pv}{pv\!}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lvert}{\rvert}
+\DeclarePairedDelimiter\dnorm{\lVert}{\rVert}
