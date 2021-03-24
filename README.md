@@ -9,7 +9,7 @@ O texto aqui escrito também está contido e melhor detalhado como comentários 
  
  Se encontrar bugs, envie um e-mail relatando.
 
-## Pacotes nativos da classe PPGMAp.cls (nao precisam ser adicionados pelo usuario)	
+## Pacotes nativos da classe PPGMAp.cls (não precisam ser adicionados pelo usuario)	
  - inputenc (utf8 encoding)
  - fontenc  (T1 encoding)
  - babel    (default: brazil - english, portuguese, french, spanish, german, russian)
