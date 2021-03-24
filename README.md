@@ -9,7 +9,7 @@ O texto aqui escrito também está contido e melhor detalhado como comentários 
  
  Se encontrar bugs, envie um e-mail relatando.
 
-## Pacotes nativos da classe PPGMAp.cls (não precisam ser adicionados pelo usuario)	
+## Pacotes nativos da classe PPGMAp.cls (não precisam ser adicionados pelo usuário)	
  - inputenc (utf8 encoding)
  - fontenc  (T1 encoding)
  - babel    (default: brazil - english, portuguese, french, spanish, german, russian)
@@ -22,7 +22,7 @@ O texto aqui escrito também está contido e melhor detalhado como comentários 
 ##	Sobre a compilação
  É recomendável a utilização da biblioteca/compilador TeX Live 2016 FULL (este modelo foi compilado para teste com a versao 2016.20170123-5).
  
- Para a instalacao do TeX Live em so's derivados do linux Ubuntu utilizar:
+ Para a instalação do TeX Live em SO's derivados do linux Ubuntu utilizar:
  ```
  sudo apt-get install texlive-full 
  ```
@@ -45,8 +45,8 @@ O texto aqui escrito também está contido e melhor detalhado como comentários 
  pdflatex main
  pdflatex main		
  ```
- ### Utilizando a ide TeXstudio:
- Usuarios do TeXstudio devem configurar a ide para gerar a lista de simbolos acessando
+ ### Utilizando a IDE TeXstudio:
+ Usuarios do TeXstudio devem configurar a IDE para gerar a lista de símbolos acessando
  ```
  Opções -> Configurar TeXstudio -> Compilação -> Comandos do usuário -> Adicionar
  ```
@@ -55,7 +55,7 @@ O texto aqui escrito também está contido e melhor detalhado como comentários 
  - Nome do comando:  user0:Make Nomenclature
  - Linha de comando: makeindex -s nomencl.ist -t %.nlg -o %.nls %.nlo
  
- Para a compilacao utilizar:
+ Para a compilação utilizar:
  ```
  Ferramentas -> Comandos -> PDFLaTeX
  Ferramentas -> Comandos -> BibteX              <opcional>
@@ -67,7 +67,7 @@ O texto aqui escrito também está contido e melhor detalhado como comentários 
  ### Usando o Overleaf
  Basta fazer um Git Clone usando o próprio Overleaf ou fazer o upload manual da mesma estrutura deste projeto.
 
- ## Opcoes da classe PPGMAp.cls
+ ## Opções da classe PPGMAp.cls
  Por padrão a classe está configurada para tese de doutorado com texto em português, folha A4,
  tamanho de fonte 12pt e configuração de impressão em ambos os lados da folha.
  Ao usuário, porém, estão disponíveis algumas opções de configuração:
@@ -80,4 +80,4 @@ O texto aqui escrito também está contido e melhor detalhado como comentários 
  com excessão da primeira página (folha de rosto e ficha catalográfica). Para tal são inseridas páginas em
  branco no documento, e o usuário deve selecionar no aplicativo de impressão do sistema operacional a opção `IMPRIMIR EM AMBOS OS LADOS`
  
- Demais opcoes da classe base report.cls NAO sao repassadas a classe PPGMAp.cls
+ Demais opções da classe base report.cls NÃO são repassadas à classe PPGMAp.cls.
