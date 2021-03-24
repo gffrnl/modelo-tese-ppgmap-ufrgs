@@ -19,7 +19,7 @@ O texto aqui escrito também está contido e melhor detalhado como comentários 
  - atbegshi
  - calc
 
-##	Sobre a compilacao
+##	Sobre a compilação
  É recomendável a utilização da biblioteca/compilador TeX Live 2016 FULL (este modelo foi compilado para teste com a versao 2016.20170123-5).
  
  Para a instalacao do TeX Live em so's derivados do linux Ubuntu utilizar:
@@ -63,6 +63,9 @@ O texto aqui escrito também está contido e melhor detalhado como comentários 
  Ferramentas -> Comandos -> PDFLaTeX
  Ferramentas -> Comandos -> PDFLaTeX
  ```
+ 
+ ### Usando o Overleaf
+ Basta fazer um Git Clone usando o próprio Overleaf ou fazer o upload manual da mesma estrutura deste projeto.
 
  ## Opcoes da classe PPGMAp.cls
  Por padrão a classe está configurada para tese de doutorado com texto em português, folha A4,
