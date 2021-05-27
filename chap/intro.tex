@@ -1,3 +1,81 @@
-\chapter{Introduction}
+\chapter{Introdução}
+Teste latexmk
+\section{Título da primeira seção}
+Texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
 
-\section{title}
+\subsection{Como inserir citações no texto}
+
+De acordo com \cite{bucur2016nonlocal} texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto.
+
+Texto texto texto  texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto \cite{huang2014numerical,warnatz06}.
+
+\section{Figuras e Tabelas}\label{sec3}
+
+Instruções para a introdução de figuras e tabelas.
+
+%\begin{obs}
+%Não esqueçam: tabelas e figuras têm legendas.
+%\end{obs}
+
+\subsection{Exemplo: como incluir figuras}
+OBS: A legenda deve vir abaixo da figura.
+
+Na Figura \ref{figura01} é possível perceber que texto texto texto texto.
+\begin{figure}
+\centering
+\includegraphics[width=.3\textwidth]{chap/logoppgmap.png}
+\caption{ {\small Logo do PPGMAp, UFRGS, Porto Alegre.}}
+\label{figura01}
+\end{figure}
+
+\subsection{Exemplo: como incluir tabelas}
+
+Na confecção das tabelas é recomendado usar o ambiente \texttt{table}, com legenda acima da tabela e as entradas centralizadas nas colunas, como na Tabela \ref{tabela01}.
+\begin{table}[ht] \label{tabela01}
+\caption{ \  Metodologia 1- Boole}
+\begin{center}
+\begin{footnotesize}
+\begin{tabular}{ccccccc}
+\hline
+ $x$  & N=1001  & N=2001  & N=4001  & N=8001
+\\ \hline   
+0.00  &  0.000467  &  0.000467  &  0.000468    &  0.000468    &  \\ 
+10.00  &  0.031540  &  0.031546  &  0.031546    &  0.031546    &  \\
+20.00  &  0.612111  &  0.612161  &  0.612163    &  0.612163    & \\ 
+30.00  &  12.320687  &  12.318744  &  12.318006    &  12.317711    &  \\ 
+40.00  &  1.705255  &  1.705382  &  1.705394    &  1.705398    & \\ 
+50.00  &  1.506538  &  1.507221  &  1.507602    &  1.507797    & \\ 
+60.00  &  21.900884  &  21.894519  &  21.892193    &  21.891369    &\\ 
+70.00  &  1.072764  &  1.072963  &  1.073030    &  1.073067    & \\ 
+80.00  &  0.055370  &  0.055387  &  0.055391    &  0.055393    & \\ 
+90.00  &  0.002853  &  0.002854  &  0.002854    &  0.002855    & \\ 
+100.00  &  0.000042  &  0.000042  &  0.000042    &  0.000042    & \\ 
+  \hline
+\end{tabular}
+\end{footnotesize}
+\end{center}
+\label{table6P}
+\end{table}
+
+
+
+\subsection{Exemplo: como incluir equações}
+
+As equações mais importantes são numeradas sequencialmente no texto, com a numeração automaticamente colocada à direita usando o comando \verb!\label{nome-da-equacao}! para identificá-las. A chamada \verb!\eqref{nome-da-equacao}! faz referência à equação, no texto.
+
+EXEMPLO: Considere o sistema de equações \eqref{equm}, dado por:
+%\begin{equation}\label{equm}
+%\frac{\partial u}{\partial t}=\frac{\partial u}{\partial x}, \quad  %\mathrm{onde} \; u=u(x,t)
+%\end{equation}
+\begin{eqnarray} \label{equm}
+\left\{
+\begin{array}{ll}
+\vspace{0.1cm}
+\displaystyle \dot{H} &= r\left(1-\frac{H}{K}\right) H-n_{1}H-\beta PH, \\
+\vspace{0.1cm}
+\displaystyle \dot{I} &= \beta HP - I\left(m_{2} + n_{2}\right),\\
+\displaystyle \dot{P} &= \delta n_{2}I - m_{3}P.
+\end{array}
+\right.
+\end{eqnarray}
+onde $H$ é a densidade larval da broca da cana-de-açúcar (\textit{Diatraea saccharalis}), $I$ é a densidade da população de $H$ que é parasitada por $P$, enquanto $P$ é a densidade da larva parasita(\textit{Cotesia flavipes}). Quanto aos parâmetros, tem-se que $r$ representa a taxa de crescimento intrínseco da praga; $K$ é a capacidade de suporte do ambiente; $m_{2}$ e $m_3$ são as taxas de mortalidade de $I$ e $P$, respectivamente; $n_{1}$ é a fração da população da larva que se transforma em pupa em um instante de tempo $t$; $n_{2}$ é a fração da larva parasitada da qual parasitoides adultos emergem em um instante de tempo $t$; $\beta$ é a taxa intrínseca de parasitismo; $\delta$ é o número de parasitoides adultos que emergem de uma larva parasitada em um instante $t$.

@@ -105,8 +105,10 @@
 %		Demais opcoes da classe base report.cls NAO sao repassadas a classe PPGMAp.cls
 %	
 
-% \documentclass[print,masters]{./config/PPGMAp}
-\documentclass[]{./config/PPGMAp}
+%\documentclass[print,masters]{.config/PPGMAp}
+%\documentclass[print,qualification]{.config/PPGMAp}
+%Para a tese habilite:
+\documentclass{.config/PPGMAp}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
@@ -181,7 +183,7 @@
 % Coordenador(a) do PPGMAp:
 % 	[genero<opcional>]{tratamento}{primeiro nome}{ultimo nome}
 %
-\PPGMApcoord{Prof. Dr.}{Ezequia}{Sauter}
+\PPGMApcoord{Prof. Dr.}{Fulano}{Detal}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
@@ -195,7 +197,7 @@
 % ...
 %
 
-\usepackage{./config/pack-and-cmd} % preâmbulo em outro arquivo!
+\usepackage{usr/pack-and-cmd} % preâmbulo em outro arquivo!
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 %
@@ -247,7 +249,7 @@
 
 \begin{document}
 
-\include{config/tikz-defn}
+\include{usr/tikz-defn}
 %
 %	Elementos pre-textuais:
 %

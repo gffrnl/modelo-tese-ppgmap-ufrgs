@@ -27,7 +27,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{./config/PPGMAp}
+\ProvidesClass{./.config/PPGMAp}
 
 \newcommand{\@doctype}{0}
 \newcommand{\@printoption}{}
@@ -410,7 +410,7 @@
 						Doctor in Applied Mathematics
 					}{
 						Qualifica\c c\~ao submetida como requisito parcial\\
-						para a obten\c c\~ao do grau de\\
+						para a obten\c c\~ao do título de\\
 							\if \@authors a Doutora \else 
 							\if \@authors A Doutora \else
 							\if \@authors f Doutora \else
@@ -425,7 +425,7 @@
 						Doctor in Applied Mathematics
 					}{
 						Tese submetida como requisito parcial\\
-						para a obten\c c\~ao do grau de\\
+						para a obten\c c\~ao do título de\\
 							\if \@authors a Doutora \else 
 							\if \@authors A Doutora \else
 							\if \@authors f Doutora \else
@@ -559,11 +559,11 @@
 			Qualifica\c c\~ao submetida ao Programa~de~P\' os-Gradua\c c\~ ao em 
 			Matem\' atica~Aplicada do Instituto~de~Matem\' atica~e~Estatística da 
 			Universidade~Federal~do~Rio Grande do Sul, como requisito parcial para 
-			a obten\c c\~ao do grau de\else
+			a obten\c c\~ao do título de\else
 			Tese submetida ao Programa~de~P\' os-Gradua\c c\~ ao em 
 			Matem\' atica~Aplicada do Instituto~de~Matem\' atica~e~Estatística da 
 			Universidade~Federal~do~Rio Grande do Sul, como requisito parcial para 
-			a obten\c c\~ao do grau de\fi\fi
+			a obten\c c\~ao do título de\fi\fi
 	}
 	\vfill
 	{
