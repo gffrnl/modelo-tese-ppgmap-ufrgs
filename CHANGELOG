@@ -1,2 +1,4 @@
 27-05-21 MUDANÇA DA PASTA DE CONFIGURAÇÕES DE config para .config
-         Introdução do .latexmkrc, .gitignore usr/
+        Introdução do .latexmkrc, .gitignore usr/
+05-07-23 AJUSTE NA CONFIGURAÇÃO PADRÃO DE IMPRESSÃO
+        Agora, por padrão, usamos a opção `oneside`, ao invés de `print`
