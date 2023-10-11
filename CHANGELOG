@@ -1,4 +1,8 @@
-27-05-21 MUDANÇA DA PASTA DE CONFIGURAÇÕES DE config para .config
-        Introdução do .latexmkrc, .gitignore usr/
-05-07-23 AJUSTE NA CONFIGURAÇÃO PADRÃO DE IMPRESSÃO
-        Agora, por padrão, usamos a opção `oneside`, ao invés de `print`
+21-05-27 MUDANCA DA PASTA DE CONFIGURACOES DE config PARA .config
+	Introducao do .latexmkrc, .gitignote usr/
+23-07-05 AJUSTE NA CONFIGURACAO PADRAO DE IMPRESSAO
+	Agora, por padrao, usamos a opcao `oneside`, ao inves de `print`
+23-10-11 CONGELAMENTO DO BRANCH main PARA CRIACAO DA RELEASE v1.0.1
+	1. Mudancas no arquivo CHANGELOG:
+		1.1 remocao da acentuacao latina
+		1.2 mudanca do formato de datas para aaaa-mm-dd
