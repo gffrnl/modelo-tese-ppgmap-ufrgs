@@ -89,7 +89,7 @@
 %
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
-\RequirePackage[english,portuguese,french,spanish,german,russian,brazil]{babel}
+\RequirePackage[english,portuguese,french,spanish,german,brazil]{babel}
 \RequirePackage{etoolbox}
 \RequirePackage[intoc]{nomencl}
 \RequirePackage{lipsum}
