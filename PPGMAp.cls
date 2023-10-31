@@ -27,7 +27,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{./.config/PPGMAp}
+\ProvidesClass{PPGMAp}
 
 \newcommand{\@doctype}{0}
 \newcommand{\@printoption}{}
